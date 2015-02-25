@@ -1,0 +1,25 @@
+<template name="npostsList">
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">News</li>
+    </ol>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="searchNewsPost" id="searchNewsPost">
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+    </div>
+    <br>
+    <div class="posts">
+        {{#each nposts}}
+            {{> npostItem}}
+        {{/each}}
+        {{#if nextPath}}
+            <a class="load-more" href="{{nextPath}}">Load more</a>
+        {{else}}
+            {{#unless ready}}
+                {{> spinner}}
+            {{/unless}}
+        {{/if}}
+    </div>
+</template>

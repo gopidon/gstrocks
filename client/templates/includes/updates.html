@@ -1,0 +1,26 @@
+<template name="updates">
+    <div class="panel panel-default">
+        <div class="panel-heading"> <i class="fa fa-flash"></i> <b>What's New</b></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="demo">
+                        {{#each top5Posts}}
+                            <li class="news-item">
+                                <table cellpadding="4">
+                                    <tr>
+                                        <td><img src="/images/3.png" width="60" class="img-circle" /></td>
+                                        <td> {{title}} <a href="{{pathFor 'postPage'}}">Read more...</a></td>
+                                    </tr>
+                                </table>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <a href="{{pathFor 'newPosts'}}" style="text-decoration: underline"><b>See all</b></a>
+        </div>
+    </div>
+</template>

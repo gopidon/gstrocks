@@ -1,0 +1,35 @@
+
+    <template name="signup">
+
+
+        <h2>Sign Up</h2>
+        <hr>
+        <div class="container">
+            <form action="/sign-up" id="signUpForm" method="post" role="form">
+                <div class="form-group {{errorClass 'email'}}">
+                    <label class="control-label" for="signUpEmail">Email address</label>
+                    <div class="controls">
+                        <input id="signUpEmail" class="form-control" name="email" placeholder="Email Address" type="email" >
+                        <span class="help-block">{{errorMessage 'email'}}</span>
+                    </div>
+                </div>
+                <div class="form-group {{errorClass 'password'}}">
+                    <label class="control-label" for="signUpPassword">Password</label>
+                    <div class="controls">
+                        <input id="signUpPassword" class="form-control" name="password" placeholder="Password" type="password">
+                        <span class="help-block">{{errorMessage 'password'}}</span>
+                    </div>
+                </div>
+                <div class="form-group {{errorClass 'passwordConfirm'}}">
+                    <label class="control-label" for="signUpPasswordConfirm">Confirm Password</label>
+                    <div class="controls">
+                        <input id="signUpPasswordConfirm" class="form-control" name="password-confirm" placeholder="Confirm" type="password">
+                        <span class="help-block">{{errorMessage 'passwordConfirm'}}</span>
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+        <!-- end #sign-up-form -->
+      </div>
+
+    </template>

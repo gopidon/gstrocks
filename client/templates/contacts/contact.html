@@ -1,0 +1,65 @@
+<template name="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-4">
+                <div class="[ info-card ]">
+                    <img style="height:100%;width: 100%" src="images/MyProf.jpg" />
+                    <div class="[ info-card-details ] animate">
+                        <div class="[ info-card-header ]">
+                            <h1> Gopi Donthireddy I.R.S </h1>
+                        </div>
+                        <div class="[ info-card-detail ]">
+                            <!-- Description -->
+                            <p>Hey, Whats up! I am Gopi. I belong to the Indian Revenue Service (Customs, Central Excise, Service Tax and Narcotics).
+                               I am also a Software Engineer. I have previously worked as Software Development Manager at Oracle Corp. I love coding.
+                                I want to see the Web win over the Native. I get really excited about new web technologies such as <a target="_blank" href="https://www.meteor.com">Meteor.js</a> and <a target="_blank" href="http://www.famo.us">Famo.us</a>.
+                                I am interested in bringing together both the worlds that I have straddled across (Tech and Govt). This site is an example of that.
+                            </p>
+                          <div class="social">
+                                <a href="https://www.facebook.com/gopi.don" class="[ social-icon facebook ] animate" target="_blank"><span class="fa fa-facebook"></span></a>
+
+                                <a href="https://twitter.com/gopidon" class="[ social-icon twitter ] animate" target="_blank"><span class="fa fa-twitter"></span></a>
+
+                                <a href="https://github.com/gopidon" class="[ social-icon github ] animate" target="_blank"><span class="fa fa-github-alt"></span></a>
+
+                                <a href="https://plus.google.com/101644013555579283435" target="_blank" class="[ social-icon google-plus ] animate"><span class="fa fa-google-plus"></span></a>
+
+                                <a href="https://in.linkedin.com/in/gopidon" target="_blank" class="[ social-icon linkedin ] animate"><span class="fa fa-linkedin"></span></a>
+                            </div>
+                            <br>
+                            <div>
+                                <a style="text-decoration: underline" href="">gopi.don@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Feedback</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="main form">
+                            <div class="form-group {{errorClass 'name'}}">
+                                <label class="control-label" for="name">Name</label>
+                                <div class="controls">
+                                    <input name="name" id="name" type="text" value="" placeholder="Name" class="form-control"/>
+                                    <span class="help-block">{{errorMessage 'name'}}</span>
+                                </div>
+                            </div>
+                            <div class="form-group {{errorClass 'suggestion'}}">
+                                <label class="control-label" for="suggestion">Suggestion</label>
+                                <div class="controls">
+                                    <textarea name="suggestion" id="suggestion" rows=10 type="text" placeholder="Suggestion" class="form-control"></textarea>
+                                    <span class="help-block">{{errorMessage 'suggestion'}}</span>
+                                </div>
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

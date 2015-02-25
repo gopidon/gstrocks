@@ -1,0 +1,41 @@
+<template name="npostItem">
+    <!-- Modal -->
+    <div class="modal fade" id="delNPostModal" tabindex="-1" role="dialog" aria-labelledby="delNPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="delNPostModalLabel">Confirm</h4>
+                </div>
+
+                <div id="delNPostModalBody" class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <input id="delNPostModalId" type="hidden">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button type="button" id="delNPost" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-content">
+            <h3>
+                {{#if isInRole 'admin'}}
+                    <input id="makeHomeNews" type="checkbox" checked="{{makeHome}}">
+                {{/if}}
+                <a href="{{pathFor 'npostPage'}}">{{title}}</a>
+            </h3>
+            <p>
+                submitted by {{author}} on {{formatTime submitted}}
+                <a href="{{pathFor 'npostPage'}}">{{commentsCount}} comments</a>
+                {{#if ownPost}}
+                    <a href="{{pathFor 'npostEdit'}}">Edit</a>
+                {{/if}}
+
+            </p>
+        </div>
+        <a class="discuss btn btn-danger delete" id="delNPostButton" href="#"><i class="fa fa-trash"></i> Delete</a>
+    </div>
+</template>

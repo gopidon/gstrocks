@@ -1,0 +1,28 @@
+<template name="postSubmit">
+    <h1>
+        New Post
+    </h1>
+    <hr/>
+    <form class="main form">
+        <div class="form-group {{errorClass 'title'}}">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input name="title" id="title" type="text" value="" placeholder="Title" class="form-control"/>
+                <span class="help-block">{{errorMessage 'title'}}</span>
+            </div>
+        </div>
+        <div class="form-group {{errorClass 'content'}}">
+            <label class="control-label" for="content">Content</label>
+            <div class="controls">
+                <textarea name="content" id="content" rows=10 type="text" placeholder="Content" class="form-control"></textarea>
+                <span class="help-block">{{errorMessage 'content'}}</span>
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input id="invisible" type="checkbox"> Invisible
+            </label>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary"/>
+    </form>
+</template>

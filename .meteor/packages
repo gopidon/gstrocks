@@ -1,0 +1,25 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+mizzao:bootstrap-3
+iron:router
+natestrauser:font-awesome
+alanning:roles
+sacha:spin
+audit-argument-checks
+gopidon:meteor-file
+accounts-facebook
+service-configuration
+accounts-password
+tanis:bootstrap-social
+summernote:summernote
+meteorhacks:search-source
+accounts-google
+momentjs:moment
+meteorhacks:npm
+
+
+npm-container

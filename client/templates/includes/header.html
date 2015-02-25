@@ -1,0 +1,122 @@
+<template name="header">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header" style="margin-right: 15px">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="http://www.gstindiaguru.com" target="ext"><b>GSTIndiaGuru!</b></a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="{{activeRouteClass 'home'}}">
+                        <a href="{{pathFor 'home'}}"><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li style="display:none" class="dropdown {{activeRouteClass 'circle'}}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-building"></i> Circles <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{pathFor 'circle' id=1}}">Circle1</a></li>
+                            <li><a href="{{pathFor 'circle' id=2}}">Circle2</a></li>
+                            <li><a href="{{pathFor 'circle' id=3}}">Circle3</a></li>
+                            <li><a href="{{pathFor 'circle' id=4}}">Circle4</a></li>
+                            <li><a href="{{pathFor 'circle' id=5}}">Circle5</a></li>
+                            <li><a href="{{pathFor 'circle' id=6}}">Circle6</a></li>
+                        </ul>
+                    </li>
+                    <li class="{{activeRouteClass 'newNPosts' 'npostPage' 'npostEdit'}}">
+                        <a href="{{pathFor 'newNPosts'}}"><i class="fa fa-coffee"></i> In News</a>
+                    </li>
+                    <li class="{{activeRouteClass 'newDPosts' 'dpostPage' 'dpostEdit' 'newDiscussion'}}">
+                        <a href="{{pathFor 'newDPosts'}}"><i class="fa fa-comment"></i> Discuss</a>
+                    </li>
+                    <li class="{{activeRouteClass 'newPosts' 'postPage' 'postEdit'}}">
+                        <a href="{{pathFor 'newPosts'}}"><i class="fa fa-flash"></i> What's New</a>
+                    </li>
+                    <li class="{{activeRouteClass 'resources'}}">
+                        <a href="{{pathFor 'resources'}}"><i class="fa fa-book"></i> Resources</a>
+                    </li>
+                    <li class="{{activeRouteClass 'contact'}}">
+                        <a href="{{pathFor 'contact'}}"><i class="fa fa-male"></i> Contact</a>
+                    </li>
+                    <!--<li class="{{activeRouteClass 'test'}}">
+                        <a href="{{pathFor 'test'}}"><i class="fa fa-mobile-phone fa-lg"></i> Test</a>
+                    </li>-->
+                    {{#if isInRole 'admin'}}
+                        <li class="dropdown {{activeRouteClass 'manageHome' 'postSubmit'}}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-gear"></i> Admin <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{pathFor 'manageHome'}}">Home</a></li>
+                                <li><a href="{{pathFor 'postSubmit'}}">What's New</a></li>
+                                <li><a href="{{pathFor 'npostSubmit'}}">News</a></li>
+                                <li><a href="{{pathFor 'newFbs'}}">Feedback</a></li>
+                            </ul>
+                        </li>
+                    {{/if}}
+
+                </ul>
+                <!-- <ul class="nav navbar-nav navbar-right">
+                   {{#unless currentUser}}
+                        <li>{{> signin}}</li>
+                        <li><a href="{{pathFor 'signup'}}">Sign Up</a></li>
+                   {{else}}
+                        <li class="dropdown">
+                            <a href=""><i class="fa fa-user"></i> {{currentUserEmail}}<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a id="signOut" href=""><i class="fa fa-sign-out"></i> Sign Out</a></li>
+                            </ul>
+                        </li>
+                   {{/unless}}
+
+                </ul>-->
+
+                    {{#if currentUser}}
+                    <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                        <li class="dropdown">
+                            <a href=""><i class="fa fa-user"></i> {{currentUser.profile.name}}<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a id="logout" href=""><i class="fa fa-sign-out"></i> Sign Out</a></li>
+                            </ul>
+                        </li>
+                     </ul>
+
+                    {{else}}
+
+
+                        <ul id="social-logins" data-toggle="tooltip" title="Login here" class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                           <li style="margin-right: 5px">
+                               <a  id="facebook-login" href="#" class="btn navbar-btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+                           </li>
+                           <li>
+                               <a id="google-login" href="#" class="btn navbar-btn btn-social btn-google-plus"><i class="fa fa-google"></i></a>
+                           </li>
+                       </ul>
+
+
+
+                        <!-- <li>{{> signin}}</li> -->
+
+
+
+                         <!-- <li class="dropdown">
+                            <a href="">Login<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a id="facebook-login" href="#" class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i></a>
+                                </li>
+                            </ul>
+
+                          </li>-->
+
+                         <!-- <li><a id="facebook-login" href=""><i class="fa fa-facebook"></i> Login with Facebook</a></li>-->
+
+                    {{/if}}
+
+            </div>
+        </div>
+    </nav>
+</template>

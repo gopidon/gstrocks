@@ -1,0 +1,12 @@
+<template name="commentItem">
+    <li>
+        <h4>
+            <span class="author">{{author}}</span>
+            <span class="date">on {{formatTime submitted}}</span>
+        </h4>
+        <p>{{body}}</p>
+        {{#if ownComment}}
+            <a class="discuss btn btn-danger delete" href="#">Delete</a>
+        {{/if}}
+    </li>
+</template>

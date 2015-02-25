@@ -1,0 +1,18 @@
+{
+  "name": "audit",
+  "version": "0.0.1",
+  "authors": [
+    "Gopi Donthireddy <gopi.don@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-table": "~1.4.0"
+  }
+}

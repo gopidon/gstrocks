@@ -1,0 +1,13 @@
+<template name="test">
+    <input type="text" id="search-box">
+    {{#each packages}}
+    <div class="package">
+        <h4 class="name">
+            <a href="" target="_blank">{{title}}</a>
+        </h4>
+        <!-- <div class="description">
+           {{{content}}}
+        </div> -->
+    </div>
+    {{/each}}
+</template>

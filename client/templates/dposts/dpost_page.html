@@ -1,0 +1,31 @@
+<template name="dpostPage">
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/newdposts">Discussions</a></li>
+        <li class="active">View</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="row">
+            <h1>
+                {{title}}
+            </h1>
+            <hr/>
+        </div>
+        <div class="row">
+            {{{content}}}
+        </div>
+    </div>
+
+    <ul class="comments">
+        {{#each dcomments}}
+            {{> dcommentItem}}
+        {{/each}}
+    </ul>
+
+    {{#if currentUser}}
+        {{> dcommentSubmit}}
+    {{else}}
+        <p>Please log in to leave a comment.</p>
+    {{/if}}
+
+</template>
