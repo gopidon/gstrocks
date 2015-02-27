@@ -15,7 +15,7 @@ Template.home.helpers({
     }*/
     GSTBrief: function(){
         var GSTPost = Posts.findOne({title: 'GSTPost'});
-        return GSTPost.content.substring(0,800) + " ...";
+        return GSTPost.content.substring(0,22500) + " ...";
     }
 });
 

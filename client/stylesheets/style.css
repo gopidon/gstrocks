@@ -654,3 +654,11 @@ a.linkedin {
 a.linkedin:hover {
     background-color: rgb(1, 116, 179) !important;
 }
+
+.whity{
+    margin-bottom: 10px;padding: 15px;background: #fff;border: 1px solid #ddd;
+}
+
+.whity h2{
+    background: #36A5E4;padding: 20px
+}
