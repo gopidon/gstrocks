@@ -29,6 +29,8 @@
                 {{/if}}
             </p>
         </div>
-        <a class="discuss btn btn-danger" id="postDelButton" href="#"><i class="fa fa-trash"></i> Delete</a>
+        {{#if isInRole 'admin'}}
+            <a class="discuss btn btn-danger" id="postDelButton" href="#"><i class="fa fa-trash"></i> Delete</a>
+        {{/if}}
     </div>
 </template>
