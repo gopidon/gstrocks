@@ -416,7 +416,9 @@ body{
     }
 }
 
-.grid-block, .main, .post, .comments li, .comment-form { background: #fff;
+
+.grid-block, .main, .post, .comments li, .comment-form {
+    background: #fff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -426,6 +428,10 @@ body{
     margin-bottom: 10px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
+
+.comments li{
+    background: #F3F3F3;
+}
 
 #spinner {
     height: 300px;
@@ -667,4 +673,25 @@ h2.main{
 
 h2.main a{
     color: #FFF
+}
+
+h3.main{
+    background: #2FA4E7;padding: 10px;margin: 0px 0px 10px 0px;
+    font-size: 20px;
+}
+
+h3.main a{
+    color: #FFF
+}
+
+.whity h2{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.whity h3{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
