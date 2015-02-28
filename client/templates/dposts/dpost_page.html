@@ -6,26 +6,34 @@
     </ol>
     <div class="container-fluid">
         <div class="row">
-            <h1>
-                {{title}}
-            </h1>
-            <hr/>
+            <div class="whity">
+                <h3>
+                    {{title}}
+                </h3>
+                <hr/>
+                {{{content}}}
+            </div>
         </div>
         <div class="row">
-            {{{content}}}
+
+            <h3 class="main">
+                <a>Comments</a>
+            </h3>
+            <div class="whity">
+                <ul class="comments">
+                    {{#each dcomments}}
+                        {{> dcommentItem}}
+                    {{/each}}
+                </ul>
+
+                {{#if currentUser}}
+                    {{> dcommentSubmit}}
+                {{else}}
+                    <p>Please log in to leave a comment.</p>
+                {{/if}}
+            </div>
         </div>
+
     </div>
-
-    <ul class="comments">
-        {{#each dcomments}}
-            {{> dcommentItem}}
-        {{/each}}
-    </ul>
-
-    {{#if currentUser}}
-        {{> dcommentSubmit}}
-    {{else}}
-        <p>Please log in to leave a comment.</p>
-    {{/if}}
 
 </template>
