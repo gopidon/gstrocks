@@ -6,11 +6,11 @@ Meteor.startup(function () {
 
     if (!admin) {
         //Seed one
-        console.log('Seeding admin user........');
+        logger.info('Seeding admin user........');
         var user = Accounts.createUser({email: 'hydaudit3@gmail.com', profile:{name: 'Gopi Don'}, password: 'cbecaudit'});
-        console.log('Assigning admin role....');
+        logger.info('Assigning admin role....');
         Roles.addUsersToRoles(user, ['admin']);
-        console.log('Seeded admin user.......');
+        logger.info('Seeded admin user.......');
     }
     else{
         logger.info("Admin user already seeded..");

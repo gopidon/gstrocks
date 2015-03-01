@@ -31,7 +31,7 @@ Template.npostItem.events(
                 $('#delNPostModal').modal("hide");
                 // display the error to the user and abort
                 if (error) {
-                    //console.log("Error", error);
+                    logger.error(error);
                     throwError(error.reason);
                 }
 

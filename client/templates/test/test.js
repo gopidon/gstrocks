@@ -3,7 +3,6 @@
  */
 Template.test.helpers({
     packages: function() {
-        //console.log("Inside getPackages");
 
         return PackageSearch.getData({
             sort: {submitted: -1}

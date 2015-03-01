@@ -2,7 +2,7 @@
  * Created by gopi on 1/8/15.
  */
 Template.dcommentSubmit.created = function() { Session.set('dcommentSubmitErrors', {});
-}
+};
 Template.dcommentSubmit.helpers({ errorMessage: function(field) {
     return Session.get('dcommentSubmitErrors')[field]; },
     errorClass: function (field) {
@@ -12,7 +12,6 @@ Template.dcommentSubmit.events({
     'submit form': function(e, template) {
         e.preventDefault();
         var $body = $(e.target).find('[name=body]');
-        console.log("DComment post Id:", template.data._id);
         var dcomment = {
             body: $body.val(),
             dpostId: template.data._id

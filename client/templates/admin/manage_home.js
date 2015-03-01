@@ -9,7 +9,7 @@ Template.manageHome.created = function() {
     Session.set('manageHomeErrors', {});
     Session.set("FileUploadStatus", {status:false});
 
-}
+};
 
 Template.manageHome.helpers(
     {
@@ -41,7 +41,7 @@ Template.manageHome.events(
             var homeMessages = {
                 title: title,
                 desc: desc
-            }
+            };
 
            var errors = validateHomeMessages(homeMessages);
            if(errors.title || errors.desc)
@@ -49,7 +49,7 @@ Template.manageHome.events(
 
             var newMessage = {
                 messages: [{code:'title', value:title}, {code:'desc',value:desc}]
-            }
+            };
 
             Messages.update(messageId, {$set: newMessage}, function(error)
             {
@@ -88,13 +88,13 @@ Template.manageHome.events(
                     Files.insert(mFile, function(err, res){
                         mFile.upload(file, "uploadFile", {size: 1024*1024},function(err){
                             if(err){
-                                console.log(err);
+                                logger.error(err);
                             }
                             else{
-                                console.log("Upload Complete Braaaa!");
+                                logger.info("Upload Complete Braaaa!");
                                 setTimeout(function(){
                                     Files.remove(mFile._id);
-                                }, 1000)
+                                }, 1000);
 
                                 Session.set("FileUploadStatus", {status:false});
                             }
@@ -107,7 +107,7 @@ Template.manageHome.events(
                 Session.set("FileUploadStatus", {status:false});
                 fileTextInput.value="";
             }
-            console.log(Session.get("FileUploadStatus"));
+            logger.info(Session.get("FileUploadStatus"));
         }
 });
 
@@ -120,4 +120,4 @@ validateHomeMessages = function (messages)
     if (!messages.desc)
         errors.desc = "Please fill in the description";
     return errors;
-}
+};

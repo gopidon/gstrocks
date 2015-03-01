@@ -23,6 +23,5 @@
         // this is a dumb implementation
         var parts = searchText.trim().split(/[ \-\:]+/);
         var searchRegExp = new RegExp("(" + parts.join('|') + ")", "ig");
-        console.log(searchRegExp);
         return searchRegExp;
     }

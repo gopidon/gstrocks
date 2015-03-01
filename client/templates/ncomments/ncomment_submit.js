@@ -2,7 +2,7 @@
  * Created by gopi on 1/8/15.
  */
 Template.ncommentSubmit.created = function() { Session.set('ncommentSubmitErrors', {});
-}
+};
 Template.ncommentSubmit.helpers({ errorMessage: function(field) {
     return Session.get('ncommentSubmitErrors')[field]; },
     errorClass: function (field) {
@@ -12,7 +12,6 @@ Template.ncommentSubmit.events({
     'submit form': function(e, template) {
         e.preventDefault();
         var $body = $(e.target).find('[name=body]');
-        console.log("NComment post Id:", template.data._id);
         var ncomment = {
             body: $body.val(),
             npostId: template.data._id

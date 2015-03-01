@@ -13,7 +13,7 @@ Template.header.rendered = function(){
         $('#social-logins').tooltip('hide');
     }
 
-}
+};
 
 Template.header.helpers({
     isAdminUser: function(){
@@ -33,7 +33,6 @@ Template.header.helpers({
         var args = Array.prototype.slice.call(arguments, 0);
         args.pop();
         var active = _.any(args, function(name) {
-            //console.log(Router.current().route.getName());
             return Router.current() && Router.current().route.getName() === name
         });
         return active && 'active';

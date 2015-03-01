@@ -6,7 +6,7 @@ Template.signup.created = function() {
 
     Session.set('signUpErrors', {});
 
-}
+};
 
 Template.signup.helpers(
     {
@@ -34,7 +34,7 @@ Template.signup.events({
             email: email,
             password: password,
             passwordConfirm: passwordConfirm
-        }
+        };
 
         var errors = validateSignUp(signup);
         if (errors.email || errors.password || errors.passwordConfirm)
@@ -50,7 +50,6 @@ Template.signup.events({
                         throwError('We are sorry but something went wrong. Try again!');
                     }
                 } else {
-                    //console.log('Congrats, you\'re in!');
                     Router.go('home');
                 }
             });
@@ -80,4 +79,4 @@ validateSignUp = function (signup)
     }
 
     return errors;
-}
+};
