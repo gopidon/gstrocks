@@ -73,7 +73,7 @@ Meteor.publish('top5Posts', function() {
 
 
 Meteor.publish('HomeNewsPosts', function() {
-    return NPosts.find({makeHome: true}, {sort: {submitted: -1}, limit: 3});
+    return NPosts.find({makeHome: true}, {sort: {submitted: -1}, limit: 6});
 });
 
 Meteor.publish('singlePost', function(id) {

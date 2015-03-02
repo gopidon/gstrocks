@@ -21,7 +21,7 @@ Template.updates.rendered = function(){
              onToDo: null
          });
 
-     }, 300)
+     }, 500)
 
         this.rendered = true;
     }
