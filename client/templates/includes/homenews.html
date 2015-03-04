@@ -1,15 +1,32 @@
 <template name="homenews">
 
-  <div class="row">
-    {{#each HomeNewsPosts}}
-        <div class="col-md-4">
-            <div class="whity">
-                <h3><a href="{{pathFor 'npostPage'}}">{{title}}</a></h3>
-                <p><a class="btn btn-default" href="{{pathFor 'npostPage'}}" role="button">View details »</a></p>
+    <div class="row">
+        {{#each HomeNewsPosts}}
+          {{#if firstRow}}
+            <div class="col-md-4">
+                <div class="whity">
+                    <h3><a href="{{pathFor 'npostPage'}}">{{title}}</a></h3>
+                    <p><a class="btn btn-default" href="{{pathFor 'npostPage'}}" role="button">View details »</a></p>
+                </div>
             </div>
-        </div>
-    {{/each}}
-  </div>
+          {{/if}}
+        {{/each}}
+    </div>
+
+    <div class="row">
+        {{#each HomeNewsPosts}}
+            {{#if secondRow}}
+                <div class="col-md-4">
+                    <div class="whity">
+                        <h3><a href="{{pathFor 'npostPage'}}">{{title}}</a></h3>
+                        <p><a class="btn btn-default" href="{{pathFor 'npostPage'}}" role="button">View details »</a></p>
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+
+
 
 </template>
 

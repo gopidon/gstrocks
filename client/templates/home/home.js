@@ -17,6 +17,8 @@ Template.home.helpers({
         var GSTPost = Posts.findOne({title: 'GSTPost'});
         return GSTPost.content.substring(0,600) + " ...";
     }
+
+
 });
 
 Template.home.rendered = function(){
