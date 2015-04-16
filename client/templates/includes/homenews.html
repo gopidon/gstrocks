@@ -5,8 +5,10 @@
           {{#if firstRow}}
             <div class="col-md-4">
                 <div class="whity">
-                    {{formatDate submitted}}
+                    <i class="fa fa-calendar"></i> {{formatDate submitted}}
+                    <hr>
                     <h3><a href="{{pathFor 'npostPage'}}">{{title}}</a></h3>
+                    <br>
                     <p><a class="btn btn-default" href="{{pathFor 'npostPage'}}" role="button">View details »</a></p>
                 </div>
             </div>
@@ -19,8 +21,10 @@
             {{#if secondRow}}
                 <div class="col-md-4">
                     <div class="whity">
-                        {{formatDate submitted}}
+                        <i class="fa fa-calendar"></i> {{formatDate submitted}}
+                        <hr>
                         <h3><a href="{{pathFor 'npostPage'}}">{{title}}</a></h3>
+                        <br>
                         <p><a class="btn btn-default" href="{{pathFor 'npostPage'}}" role="button">View details »</a></p>
                     </div>
                 </div>
