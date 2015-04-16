@@ -18,6 +18,9 @@ Template.dpostEdit.helpers(
         },
         errorClass: function (field) {
             return !!Session.get('dpostEditErrors')[field] ? 'has-error' : '';
+        },
+        eOpinion: function(){
+            return this.eOpinion;
         }
     }
 );
@@ -27,7 +30,8 @@ Template.dpostEdit.events({ 'submit form': function(e) {
     var currentDPostId = this._id;
     var dpostProperties = {
         title: $(e.target).find('[name=title]').val(),
-        content: $(e.target).find('[name=content]').val()
+        content: $(e.target).find('[name=content]').val(),
+        eOpinion: $(e.currentTarget).find('#eOpinion')[0]['checked']
     }
 
     var errors = validateDPost(dpostProperties);

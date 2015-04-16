@@ -31,7 +31,8 @@ Template.dpostSubmit.events(
             e.preventDefault();
             var post = {
                 title: $(e.currentTarget).find('#title').val(),
-                content: $(e.currentTarget).find('#content').val()
+                content: $(e.currentTarget).find('#content').val(),
+                eOpinion: $(e.currentTarget).find('#eOpinion')[0]['checked']
             };
 
             var errors = validateDPost(post);
