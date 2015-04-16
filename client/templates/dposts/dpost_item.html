@@ -27,7 +27,7 @@
                 <a href="{{pathFor 'dpostPage'}}">{{title}}</a>
             </h3>
             <p>
-                submitted by {{author}}
+                submitted by {{author}} on {{formatTime submitted}}
                 <a href="{{pathFor 'dpostPage'}}">{{commentsCount}} comments</a>
                 {{#if ownPost}}
                     <a href="{{pathFor 'dpostEdit'}}">Edit</a>
