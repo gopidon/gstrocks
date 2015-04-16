@@ -20,7 +20,12 @@
     </div>
     <div class="post">
         <div class="post-content">
-            <h3><h3><a href="{{pathFor 'dpostPage'}}">{{title}}</a></h3></h3>
+            <h3>
+                {{#if isInRole 'admin'}}
+                    <input id="showOnHome" type="checkbox" checked="{{showOnHome}}">
+                {{/if}}
+                <a href="{{pathFor 'dpostPage'}}">{{title}}</a>
+            </h3>
             <p>
                 submitted by {{author}}
                 <a href="{{pathFor 'dpostPage'}}">{{commentsCount}} comments</a>
