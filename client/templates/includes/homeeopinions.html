@@ -5,8 +5,8 @@
           {{#if firstRow}}
             <div class="col-md-4">
                 <div class="whity">
-                    {{formatDate submitted}}
                     <h3><a href="{{pathFor 'dpostPage'}}">{{title}}</a></h3>
+                    <p>by {{author}} on {{formatDate submitted}}</p>
                     <p><a class="btn btn-default" href="{{pathFor 'dpostPage'}}" role="button">View details »</a></p>
                 </div>
             </div>
@@ -19,8 +19,8 @@
             {{#if secondRow}}
                 <div class="col-md-4">
                     <div class="whity">
-                        {{formatDate submitted}}
                         <h3><a href="{{pathFor 'dpostPage'}}">{{title}}</a></h3>
+                        <p>by {{author}} on {{formatDate submitted}}</p>
                         <p><a class="btn btn-default" href="{{pathFor 'dpostPage'}}" role="button">View details »</a></p>
                     </div>
                 </div>
