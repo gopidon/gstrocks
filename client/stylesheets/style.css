@@ -785,3 +785,7 @@ h3.main a{
     font-size: 16px;
 }
 
+.resources .whity ul>li {
+    list-style-type: none;
+}
+
