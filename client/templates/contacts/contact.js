@@ -26,11 +26,12 @@ Template.contact.events(
             e.preventDefault();
             var fb = {
                 name: $(e.currentTarget).find('#name').val(),
-                suggestion: $(e.currentTarget).find('#suggestion').val()
+                suggestion: $(e.currentTarget).find('#suggestion').val(),
+                email: $(e.currentTarget).find('#email').val()
             };
 
             var errors = validateFb(fb);
-            if (errors.name || errors.suggestion)
+            if (errors.name || errors.suggestion || errors.email)
                 return Session.set('fbErrors', errors);
 
 
