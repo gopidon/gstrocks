@@ -4,7 +4,8 @@
         {{#each HomeNewsPosts}}
           {{#if firstRow}}
             <div class="col-md-4">
-                <div class="whity">
+                <div class="whity curl">
+
                     <i class="fa fa-calendar"></i> {{formatDate submitted}}
                     <hr>
                     <h4><a href="{{pathFor 'npostPage'}}">{{title}}</a></h4>
@@ -18,7 +19,7 @@
         {{#each HomeNewsPosts}}
             {{#if secondRow}}
                 <div class="col-md-4">
-                    <div class="whity">
+                    <div class="whity curl">
                         <i class="fa fa-calendar"></i> {{formatDate submitted}}
                         <hr>
                         <h4><a href="{{pathFor 'npostPage'}}">{{title}}</a></h4>

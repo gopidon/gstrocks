@@ -671,6 +671,65 @@ a.linkedin:hover {
     border-radius: 3px;
 }
 
+
+.whity.curl{
+    position: relative;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.whity.curl:before, .whity.curl:after
+{
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    content: ' ';
+    left: 12px;
+    bottom: 12px;
+    background: transparent;
+    -webkit-transform: skew(-5deg) rotate(-5deg);
+    -moz-transform: skew(-5deg) rotate(-5deg);
+    -ms-transform: skew(-5deg) rotate(-5deg);
+    -o-transform: skew(-5deg) rotate(-5deg);
+    transform: skew(-5deg) rotate(-5deg);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.whity.curl:after
+{
+    left: auto;
+    right: 12px;
+    -webkit-transform: skew(5deg) rotate(5deg);
+    -moz-transform: skew(5deg) rotate(5deg);
+    -ms-transform: skew(5deg) rotate(5deg);
+    -o-transform: skew(5deg) rotate(5deg);
+    transform: skew(5deg) rotate(5deg);
+}
+
+.whity .circle {
+    position: absolute !important;
+    z-index: 100;
+    border: 5px #fff solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    top: 20%;
+    left: 8px;
+    -moz-box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+    0 1px 0 rgba(255,255,255,0.3);
+    -webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+    0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+    0 1px 0 rgba(255,255,255,0.3);
+}
+
 h2.main{
     background: -webkit-linear-gradient(#2FA4E7, #1E9DE5); /* For Safari 5.1 to 6.0  */
     background: -o-linear-gradient(#2FA4E7, #1E9DE5); /* For Opera 11.1 to 12.0 */
