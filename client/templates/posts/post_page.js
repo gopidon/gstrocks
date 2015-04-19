@@ -10,3 +10,19 @@ Template.postPage.helpers(
                 return Comments.find({postId: this._id});
         }
     });
+
+
+Template.postPage.events(
+    {
+        /*'click #loginLink': function(e) {
+            e.preventDefault();
+            $("#loginModalBody").text("Delete the post ");
+            $('#loginModal').modal("show");
+        }*/
+
+
+
+
+
+
+    });
