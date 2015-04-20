@@ -4,13 +4,13 @@
 
 Template.header.rendered = function(){
     if(!Meteor.user()){
-        $('#social-logins').tooltip({
+        /*$('#social-logins').tooltip({
             placement: 'bottom'
         });
-        $('#social-logins').tooltip('show');
+        $('#social-logins').tooltip('show');*/
     }
     else{
-        $('#social-logins').tooltip('hide');
+        //$('#social-logins').tooltip('hide');
     }
 
 };
@@ -51,7 +51,6 @@ Template.header.events({
     'click #facebook-login': function(e) {
         e.preventDefault();
         Meteor.loginWithFacebook({}, function(err){
-            $('.tooltip').hide();
             if (err) {
                 throwError("Facebook login failed");
             }
@@ -61,7 +60,6 @@ Template.header.events({
     'click #google-login': function(e) {
         e.preventDefault();
         Meteor.loginWithGoogle({}, function(err){
-            $('.tooltip').hide();
             if (err) {
                 throwError("Google login failed");
             }
@@ -72,9 +70,6 @@ Template.header.events({
     'click #logout': function(e) {
         e.preventDefault();
         Meteor.logout(function(err){
-            if($('.tooltip')){
-                $('.tooltip').show();
-            }
             if (err) {
                 throwError("Logout failed");
             }
