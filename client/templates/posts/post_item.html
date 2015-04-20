@@ -23,7 +23,7 @@
             <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
             <p>
                 submitted by {{author}} on {{formatTime submitted}}
-                <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
+                <a href="{{pathFor 'postPage'}}"><i class="fa fa-comments"></i> {{commentsCount}}</a>
                 {{#if ownPost}}
                     <a href="{{pathFor 'postEdit'}}">Edit</a>
                 {{/if}}
