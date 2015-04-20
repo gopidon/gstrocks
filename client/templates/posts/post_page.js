@@ -14,11 +14,10 @@ Template.postPage.helpers(
 
 Template.postPage.events(
     {
-        /*'click #loginLink': function(e) {
+        'click #loginLink': function(e) {
             e.preventDefault();
-            $("#loginModalBody").text("Delete the post ");
             $('#loginModal').modal("show");
-        }*/
+        }
 
 
 

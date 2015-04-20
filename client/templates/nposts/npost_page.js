@@ -13,3 +13,17 @@ Template.npostPage.helpers(
             return NComments.find({npostId: this._id});
         }
     });
+
+Template.npostPage.events(
+    {
+        'click #loginLink': function(e) {
+            e.preventDefault();
+            $('#loginModal').modal("show");
+        }
+
+
+
+
+
+
+    });

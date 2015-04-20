@@ -55,6 +55,7 @@ Template.header.events({
             if (err) {
                 throwError("Facebook login failed");
             }
+            $('#loginModal').modal("hide");
         });
     },
     'click #google-login': function(e) {
@@ -64,6 +65,7 @@ Template.header.events({
             if (err) {
                 throwError("Google login failed");
             }
+            $('#loginModal').modal("hide");
         });
     },
 
@@ -77,7 +79,12 @@ Template.header.events({
                 throwError("Logout failed");
             }
         })
-    }
+    },
+
+    'click #loginLink': function(e) {
+        e.preventDefault();
+        $('#loginModal').modal("show");
+     }
 });
 
 

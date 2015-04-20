@@ -1,5 +1,22 @@
 <template name="header">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Modal -->
+        <div class="modal fade in" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                    </div>
+                    <div id="loginModalBody" class="modal-body">
+
+                                <a  id="facebook-login" href="#" class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Log in with Facebook</a>
+                                <a id="google-login" href="#" class="btn btn-block btn-social btn-google-plus"><i class="fa fa-google"></i> Log in with Google</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
             <div class="navbar-header" style="margin-right: 15px">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" >
@@ -58,12 +75,7 @@
                      </ul>
                 {{else}}
                       <ul id="social-logins" data-toggle="tooltip" title="Login here" class="nav navbar-nav navbar-right" style="margin-right: 20px">
-                           <li style="margin-right: 5px">
-                               <a  id="facebook-login" href="#" class="btn navbar-btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
-                           </li>
-                           <li>
-                               <a id="google-login" href="#" class="btn navbar-btn btn-social btn-google-plus"><i class="fa fa-google"></i></a>
-                           </li>
+                          <li><a id="loginLink" href="#">Login</a></li>
                       </ul>
                 {{/if}}
 

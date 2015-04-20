@@ -10,3 +10,18 @@ Template.dpostPage.helpers(
                 return DComments.find({dpostId: this._id});
         }
     });
+
+
+Template.dpostPage.events(
+    {
+        'click #loginLink': function(e) {
+            e.preventDefault();
+            $('#loginModal').modal("show");
+        }
+
+
+
+
+
+
+    });
