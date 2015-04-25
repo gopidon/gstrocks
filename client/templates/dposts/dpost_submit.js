@@ -29,10 +29,18 @@ Template.dpostSubmit.events(
     {
         'submit form': function(e) {
             e.preventDefault();
+            var eOpinion = $(e.currentTarget).find('#eOpinion')[0];
+            console.log(eOpinion);
+            if(eOpinion != null){
+                eOpinion = $(e.currentTarget).find('#eOpinion')[0]['checked'];
+            }
+            else{
+                eOpinion = false;
+            }
             var post = {
                 title: $(e.currentTarget).find('#title').val(),
                 content: $(e.currentTarget).find('#content').val(),
-                eOpinion: $(e.currentTarget).find('#eOpinion')[0]['checked']
+                eOpinion: eOpinion
             };
 
             var errors = validateDPost(post);

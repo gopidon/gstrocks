@@ -23,11 +23,13 @@
                 <span class="help-block">{{errorMessage 'content'}}</span>
             </div>
         </div>
-        <div class="checkbox">
-            <label>
-                <input id="eOpinion" type="checkbox"> Editor's Opinion?
-            </label>
-        </div>
+        {{#if isInRole 'admin'}}
+            <div class="checkbox">
+                <label>
+                    <input id="eOpinion" type="checkbox"> Editor's Opinion?
+                </label>
+            </div>
+        {{/if}}
         <input type="submit" value="Submit" class="btn btn-primary"/>
     </form>
 </template>
