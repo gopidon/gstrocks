@@ -1,0 +1,19 @@
+<template name="userItem">
+    <div class="post">
+        <div class="post-content">
+            <h4>
+                {{profile.name}}
+            </h4>
+            <p>
+                {{#if services.facebook}}
+                    Facebook: {{services.facebook.email}}
+                {{/if}}
+                {{#if services.google}}
+                    Google: {{services.google.email}}
+                {{/if}}
+
+            </p>
+        </div>
+
+    </div>
+</template>

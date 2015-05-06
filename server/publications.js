@@ -157,3 +157,8 @@ Meteor.publish('singleNPost', function(id) {
 Meteor.publish("facebook_email", function() {
     return Meteor.users.find({_id: this.userId}, {fields: {'services.facebook.email': 1}});
 });
+
+Meteor.publish("AllUsers", function() {
+    return Meteor.users.find({});
+});
+
