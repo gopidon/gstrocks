@@ -8,7 +8,7 @@
 
                     <i class="fa fa-calendar"></i> {{formatDate submitted}}
                     <hr>
-                    <h4><a href="{{pathFor 'npostPage'}}">{{title}}</a></h4>
+                    <h4><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
                 </div>
             </div>
           {{/if}}
@@ -22,7 +22,7 @@
                     <div class="whity curl">
                         <i class="fa fa-calendar"></i> {{formatDate submitted}}
                         <hr>
-                        <h4><a href="{{pathFor 'npostPage'}}">{{title}}</a></h4>
+                        <h4><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
                     </div>
                 </div>
             {{/if}}

@@ -5,7 +5,7 @@
           {{#if firstRow}}
             <div class="col-md-4">
                 <div class="whity curl">
-                    <h4><a href="{{pathFor 'dpostPage'}}">{{title}}</a></h4>
+                    <h4><a href="{{pathFor 'dpostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
                     <p>by <b>{{author}}</b> on {{formatDate submitted}}</p>
                     <!-- <p><a class="btn btn-default" href="{{pathFor 'dpostPage'}}" role="button">View details »</a></p> -->
                 </div>
@@ -19,7 +19,7 @@
             {{#if secondRow}}
                 <div class="col-md-4">
                     <div class="whity curl">
-                        <h4><a href="{{pathFor 'dpostPage'}}">{{title}}</a></h4>
+                        <h4><a href="{{pathFor 'dpostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
                         <p>by <b>{{author}}</b> on {{formatDate submitted}}</p>
                     </div>
                 </div>
