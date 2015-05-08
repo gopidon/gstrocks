@@ -108,10 +108,16 @@ Meteor.publish('dposts', function(search, options) {
     return DPosts.find(searchObject, options);
 });
 
+
+
 Meteor.publish('dcomments', function(id) {
     check(id, String);
     return DComments.find({dpostId: id});
 });
+
+
+
+
 
 
 

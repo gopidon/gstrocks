@@ -19,16 +19,47 @@
 
     </div>
     <br>
-    <div class="posts">
-        {{#each dposts}}
-            {{> dpostItem}}
-        {{/each}}
-        {{#if nextPath}}
-            <a class="load-more" href="{{nextPath}}">Load more</a>
-        {{else}}
-            {{#unless ready}}
-                {{> spinner}}
-            {{/unless}}
-        {{/if}}
+
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#all" aria-controls="home" role="tab" data-toggle="tab">All Discussions</a></li>
+            <li role="presentation"><a href="#editor" aria-controls="profile" role="tab" data-toggle="tab">Editor's Posts</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="all">
+                <div class="posts">
+                    {{#each dposts}}
+                        {{> dpostItem}}
+                    {{/each}}
+                    {{#if nextPath}}
+                        <a class="load-more" href="{{nextPath}}">Load more</a>
+                    {{else}}
+                        {{#unless ready}}
+                            {{> spinner}}
+                        {{/unless}}
+                    {{/if}}
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="editor">
+                <div class="posts">
+                    {{#each dpostsEditor}}
+                        {{> dpostItem}}
+                    {{/each}}
+                    {{#if nextPath}}
+                        <a class="load-more" href="{{nextPath}}">Load more</a>
+                    {{else}}
+                        {{#unless ready}}
+                            {{> spinner}}
+                        {{/unless}}
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
