@@ -24,8 +24,9 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#all" aria-controls="home" role="tab" data-toggle="tab">All Discussions</a></li>
-            <li role="presentation"><a href="#editor" aria-controls="profile" role="tab" data-toggle="tab">Editor's Posts</a></li>
+            <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All Discussions</a></li>
+            <li role="presentation"><a href="#myposts" aria-controls="myposts" role="tab" data-toggle="tab">My Discussions</a></li>
+            <li role="presentation"><a href="#editor" aria-controls="editor" role="tab" data-toggle="tab">Editor's Posts</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -43,7 +44,20 @@
                         {{/unless}}
                     {{/if}}
                 </div>
-
+            </div>
+            <div role="tabpanel" class="tab-pane" id="myposts">
+                <div class="posts">
+                    {{#each dMyposts}}
+                        {{> dpostItem}}
+                    {{/each}}
+                    {{#if nextPath}}
+                        <a class="load-more" href="{{nextPath}}">Load more</a>
+                    {{else}}
+                        {{#unless ready}}
+                            {{> spinner}}
+                        {{/unless}}
+                    {{/if}}
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="editor">
                 <div class="posts">
