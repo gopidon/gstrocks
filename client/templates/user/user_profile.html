@@ -1,3 +1,26 @@
 <template name="userProfile">
-    {{currentUser.profile.name}}
+    <div class="container-fluid">
+        <h3 class="">My Profile</h3>
+        <hr>
+        <div class="row">
+            <div class="col-md-1">
+                <img style="float: left" src="{{currentUser.services.google.picture}}">
+            </div>
+            <div class="col-md-4">
+                <h4>Display Name:</h4> {{currentUser.profile.name}}
+                {{#if currentUser.services.facebook}}
+                    <h4>Login Mode:</h4> Facebook
+                    <h4>Gender:</h4> {{currentUser.services.facebook.gender}}
+                    <h4>Email:</h4> {{currentUser.services.facebook.email}}
+                {{/if}}
+                {{#if currentUser.services.google}}
+                    <h4>Login Mode:</h4> Google
+                    <h4>Gender:</h4> {{currentUser.services.google.gender}}
+                    <h4>Email:</h4> {{currentUser.services.google.email}}
+                {{/if}}
+            </div>
+
+        </div>
+    </div>
+
 </template>

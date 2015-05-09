@@ -164,6 +164,15 @@ Meteor.publish("facebook_email", function() {
     return Meteor.users.find({_id: this.userId}, {fields: {'services.facebook.email': 1}});
 });
 
+Meteor.publish("UserData", function () {
+    if (this.userId) {
+        return Meteor.users.find({_id: this.userId},
+            {fields: {'services': 1}});
+    } else {
+        this.ready();
+    }
+});
+
 Meteor.publish("AllUsers", function() {
     return Meteor.users.find({});
 });
