@@ -34,6 +34,13 @@ body{
     display: block;
 }
 
+.tab-content-border{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -71,6 +78,13 @@ body{
     padding:0px;
     margin:0px;
     list-style:none;
+}
+
+.home-disc-post-item
+{
+    padding:4px 4px;
+    margin:0px;
+    border-bottom:1px dotted #555;
 }
 
 .news-item
