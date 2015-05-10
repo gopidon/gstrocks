@@ -4,9 +4,9 @@
         {{#each HomeEditorOpinionPosts}}
           {{#if firstRow}}
             <div class="col-md-4">
-                <div class="whity curl">
-                    <h4><a href="{{pathFor 'dpostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
-                    <p>by <b>{{author}}</b> on {{formatDate submitted}}</p>
+                <div itemscope itemtype="http://schema.org/BlogPosting" class="whity curl">
+                    <h4><a href="{{pathFor 'dpostPage'}}"><span itemprop="headline">{{title}}</span> <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
+                    <p>by <b><span itemprop="publisher">{{author}}</span></b> on <span itemprop="datePublished">{{formatDate submitted}}</span></p>
                     <!-- <p><a class="btn btn-default" href="{{pathFor 'dpostPage'}}" role="button">View details »</a></p> -->
                 </div>
             </div>
@@ -18,9 +18,9 @@
         {{#each HomeEditorOpinionPosts}}
             {{#if secondRow}}
                 <div class="col-md-4">
-                    <div class="whity curl">
-                        <h4><a href="{{pathFor 'dpostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
-                        <p>by <b>{{author}}</b> on {{formatDate submitted}}</p>
+                    <div itemscope itemtype="http://schema.org/BlogPosting" class="whity curl">
+                        <h4><a href="{{pathFor 'dpostPage'}}"><span itemprop="headline">{{title}}</span> <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
+                        <p>by <b><span itemprop="publisher">{{author}}</span></b> on <span itemprop="datePublished">{{formatDate submitted}}</span></p>
                     </div>
                 </div>
             {{/if}}
