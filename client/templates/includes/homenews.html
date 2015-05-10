@@ -1,5 +1,4 @@
 <template name="homenews">
-
     <div class="row">
         {{#each HomeNewsPosts}}
           {{#if firstRow}}
@@ -8,13 +7,12 @@
 
                     <i class="fa fa-calendar"></i> {{formatDate submitted}}
                     <hr>
-                    <h4 itemprop="headline"><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
+                    <h4><a href="{{pathFor 'npostPage'}}"><span itemprop="headline">{{title}}</span> <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
                 </div>
             </div>
           {{/if}}
         {{/each}}
     </div>
-
     <div class="row">
         {{#each HomeNewsPosts}}
             {{#if secondRow}}
@@ -22,13 +20,10 @@
                     <div itemscope itemtype="http://schema.org/NewsArticle" class="whity curl">
                         <i class="fa fa-calendar"></i> {{formatDate submitted}}
                         <hr>
-                        <h4 itemprop="headline"><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
+                        <h4><a href="{{pathFor 'npostPage'}}"><span itemprop="headline">{{title}}</span> <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
                     </div>
                 </div>
             {{/if}}
         {{/each}}
     </div>
-
-
-
 </template>
