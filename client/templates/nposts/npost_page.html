@@ -6,8 +6,8 @@
     </ol>
     <div class="container-fluid">
         <div class="row">
-            <div class="whity">
-                <h3>
+            <div itemscope itemtype="http://schema.org/NewsArticle" class="whity">
+                <h3 itemprop="headline">
                     {{title}}
                 </h3>
                 <hr/>
@@ -15,7 +15,9 @@
                     <b>{{formatDate submitted}}</b>
                 </div>
                 <br>
-                {{{content}}}
+                <div itemprop="articleBody">
+                    {{{content}}}
+                </div>
             </div>
         </div>
         <div class="row">
