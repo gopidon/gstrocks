@@ -4,11 +4,11 @@
         {{#each HomeNewsPosts}}
           {{#if firstRow}}
             <div class="col-md-4">
-                <div class="whity curl">
+                <div itemscope itemtype="http://schema.org/NewsArticle" class="whity curl">
 
                     <i class="fa fa-calendar"></i> {{formatDate submitted}}
                     <hr>
-                    <h4><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
+                    <h4 itemprop="headline"><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
                 </div>
             </div>
           {{/if}}
@@ -19,10 +19,10 @@
         {{#each HomeNewsPosts}}
             {{#if secondRow}}
                 <div class="col-md-4">
-                    <div class="whity curl">
+                    <div itemscope itemtype="http://schema.org/NewsArticle" class="whity curl">
                         <i class="fa fa-calendar"></i> {{formatDate submitted}}
                         <hr>
-                        <h4><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> {{commentsCount}}</a></h4>
+                        <h4 itemprop="headline"><a href="{{pathFor 'npostPage'}}">{{title}} <i class="fa fa-comments"></i> <span itemprop="commentCount">{{commentsCount}}</span></a></h4>
                     </div>
                 </div>
             {{/if}}
