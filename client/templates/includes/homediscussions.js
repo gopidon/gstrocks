@@ -3,7 +3,7 @@
  */
 
 Template.homediscussions.onCreated(function(){
-    Meteor.subscribe('topDPosts');
+    Meteor.subscribe('topDPosts') ;
     Meteor.subscribe('latestDPosts');
 });
 
