@@ -2,8 +2,7 @@
     <div class="container-fluid">
       <div class="row">
           <div class="col-md-8" style="">
-
-              <div itemscope itemtype="http://schema.org/BlogPosting" class="row">
+              <div class="row" itemscope itemtype="http://schema.org/BlogPosting">
                   <div class="col-md-12">
                       <h3 class="main">
                           <a href="#"><i class="fa fa-info-circle"></i> <span itemprop="headline">What is GST ?</span></a>
@@ -15,19 +14,12 @@
                               <iframe style="float:left; margin-right: 10px; margin-bottom: 10px" src="https://docs.google.com/presentation/d/1NZRSpfC1hHUok8niKbRXwDhWa5zZC8my4Dc2VEr4VlU/embed?start=true&loop=true&delayms=5000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                               <span itemprop="articleBody">{{{GSTBrief}}}</span>
                               <div itemprop="publisher" style="position: absolute; left: -500px">GST India Guru Gopi Donthireddy</div>
-
                           </p>
-
-
-
                           <p><a class="btn btn-info btn-lg" href="{{pathFor 'resources'}}" role="button">Learn more »</a></p>
                       </div>
                   </div>
-
               </div>
-
               <br>
-
               <div class="row">
                   <div class="col-md-12">
                       <h3 class="main">
@@ -38,9 +30,7 @@
                       {{> homenews}}
                   </div>
               </div>
-
               <br>
-
               <div class="row">
                   <div class="col-md-12">
                       <h3 class="main">
@@ -51,26 +41,28 @@
                       {{> homeeopinions}}
                   </div>
               </div>
-
-
-
-
-                  <!-- <div class="embed-responsive embed-responsive-4by3">
-                       <iframe class="embed-responsive-item" src="//www.youtube.com/embed/sZnJklN9eXE?list=UUqS4QnRm4Pd3kWhd192ssmQ" frameborder="0" allowfullscreen></iframe>
-                  </div>-->
-
-
-
-              <!-- Example row of columns -->
-
-
-
-
+                    <!-- <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/sZnJklN9eXE?list=UUqS4QnRm4Pd3kWhd192ssmQ" frameborder="0" allowfullscreen></iframe>
+                        </div>-->
           </div>
           <div class="col-md-4">
-              {{> updates}}
-              <div>
-                  <a class="twitter-timeline" href="https://twitter.com/search?q=GST%20India" data-widget-id="572100479543304192">Tweets about GST India</a>
+              <div class="row">
+                  <div class="col-md-12">
+                      {{> updates}}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <h3 class="main">
+                          Discussions
+                      </h3>
+                      {{> homediscussions}}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <a class="twitter-timeline" href="https://twitter.com/search?q=GST%20India" data-widget-id="572100479543304192">Tweets about GST India</a>
+                  </div>
               </div>
           </div>
       </div>

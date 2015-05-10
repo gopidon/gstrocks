@@ -13,6 +13,13 @@ Meteor.publish('Fbs', function(options) {
     return Fbs.find({}, options);
 });
 
+// Posts related
+
+Meteor.publish('singlePost', function(id) {
+        check(id, String)
+        return Posts.find(id);
+    }
+);
 
 Meteor.publish('posts', function(search, options) {
     check(options, {
@@ -67,6 +74,8 @@ Meteor.publish('comments', function(id) {
     return Comments.find({postId: id});
 });
 
+//Home related
+
 Meteor.publish('top5Posts', function() {
     return Posts.find({visible: true}, {sort: {submitted: -1}, limit: 5});
 });
@@ -80,13 +89,9 @@ Meteor.publish('HomeEditorOpinionPosts', function() {
     return DPosts.find({showOnHome: true}, {sort: {submitted: -1}, limit: 6});
 });
 
-Meteor.publish('singlePost', function(id) {
-        check(id, String)
-        return Posts.find(id);
-    }
-);
 
 
+//Discussions related
 
 Meteor.publish('dposts', function(search, options) {
     check(options, {
@@ -116,16 +121,24 @@ Meteor.publish('dcomments', function(id) {
 });
 
 
-
-
-
-
-
 Meteor.publish('singleDPost', function(id) {
         check(id, String)
         return DPosts.find(id);
     }
 );
+
+Meteor.publish('latestDPosts', function() {
+        return DPosts.find({}, {sort: {submitted: -1}, limit: 5});
+    }
+);
+
+Meteor.publish('topDPosts', function() {
+        return DPosts.find({}, {sort: {commentsCount: -1}, limit: 5});
+    }
+);
+
+//News Related
+
 
 Meteor.publish('nposts', function(search, options) {
     check(options, {
@@ -160,9 +173,7 @@ Meteor.publish('singleNPost', function(id) {
     }
 );
 
-Meteor.publish("facebook_email", function() {
-    return Meteor.users.find({_id: this.userId}, {fields: {'services.facebook.email': 1}});
-});
+//User Related
 
 Meteor.publish("UserData", function () {
     if (this.userId) {

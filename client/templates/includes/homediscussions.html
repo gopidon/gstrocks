@@ -1,0 +1,39 @@
+<template name="homediscussions">
+    <!-- Tab panes -->
+    <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#top" aria-controls="top" role="tab" data-toggle="tab">Top</a></li>
+            <li role="presentation"><a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">Latest</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="top">
+                <div style="padding: 15px">
+                    <ul style="list-style-type: none">
+                        {{#each topDPosts}}
+                            <div itemscope itemtype="http://schema.org/BlogPosting">
+                                <li>
+                                    <h4><a href="{{pathFor 'dpostPage'}}"><span itemprop="headline">{{title}}</span></a></h4>
+                                </li>
+                            </div>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="latest">
+                <div style="padding: 15px">
+                    <ul style="list-style-type: none">
+                        {{#each latestDPosts}}
+                            <div itemscope itemtype="http://schema.org/BlogPosting">
+                                <li>
+                                    <h4><a href="{{pathFor 'dpostPage'}}"><span itemprop="headline">{{title}}</span></a></h4>
+                                </li>
+                            </div>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

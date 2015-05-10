@@ -6,7 +6,7 @@ Template.homeeopinions.helpers({
 
         var posts = [];
         var _i = 0;
-        DPosts.find({}, {sort: {submitted: -1}, limit: 6}).forEach(function(p){
+        DPosts.find({showOnHome: true}, {sort: {submitted: -1}, limit: 6}).forEach(function(p){
             p.position = _i;
             _i++;
             posts.push(p);
