@@ -133,6 +133,7 @@ Meteor.publish('latestDPosts', function() {
 );
 
 Meteor.publish('topDPosts', function() {
+        //Meteor._sleepForMs(2000);
         return DPosts.find({}, {sort: {commentsCount: -1}, limit: 5});
     }
 );
