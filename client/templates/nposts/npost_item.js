@@ -23,22 +23,7 @@ Template.npostItem.events(
             });
         },
 
-        'click #delNPost': function(e) {
-            e.preventDefault();
-            var currentNPostId = $("#delNPostModalId").val();
 
-            Meteor.call('npostDelete', currentNPostId, function(error) {
-                $('#delNPostModal').modal("hide");
-                // display the error to the user and abort
-                if (error) {
-                    logger.error(error);
-                    throwError(error.reason);
-                }
-
-            });
-
-
-        },
 
         'click #delNPostButton': function(e) {
             e.preventDefault();
