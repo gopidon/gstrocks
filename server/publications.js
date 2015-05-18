@@ -189,3 +189,9 @@ Meteor.publish("AllUsers", function() {
     return Meteor.users.find({});
 });
 
+// Notifications Related
+
+Meteor.publish('notifications', function() {
+    return Notifications.find({userId: this.userId, read: false});
+});
+
