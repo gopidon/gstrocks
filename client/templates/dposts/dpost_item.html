@@ -1,5 +1,6 @@
 <template name="dpostItem">
     <div class="post">
+        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
         <div class="post-content">
             <h3>
                 {{#if isInRole 'admin'}}
@@ -8,6 +9,7 @@
                 <a href="{{pathFor 'dpostPage'}}">{{title}}</a>
             </h3>
             <p>
+                {{pluralize votes "Vote"}},
                 submitted by {{author}} on {{formatTime submitted}}
                 <a href="{{pathFor 'dpostPage'}}"><i class="fa fa-comments"></i> {{commentsCount}}</a>
                 {{#if ownPost}}
