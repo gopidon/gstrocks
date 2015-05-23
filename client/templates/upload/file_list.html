@@ -1,0 +1,13 @@
+<template name="uploadFiles">
+    <h3 class="main">
+        Upload Files
+    </h3>
+    <div class="well">
+        <input type="file" multiple class="any">
+    </div>
+    <div class="fileArea">
+        {{#each uploadedFiles}}
+            {{> fileItem}}
+        {{/each}}
+    </div>
+</template>

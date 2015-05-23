@@ -1,0 +1,19 @@
+<template name="fileItem">
+
+    <div class="post">
+        <div class="post-content">
+            <h4>{{#with this.url}}<a href="{{this}}" target="_blank">{{../name}}</a>{{else}}{{this.name}}{{/with}} ({{this.size}} bytes)</h4>
+            <p>
+               uploaded on {{formatTime uploadedAt}}
+            </p>
+          {{#if this.isUploaded}}
+            {{#with this.url download=true}}
+                <a href="{{this}}" target="_blank" class="btn btn-default" role="button">Download</a>
+            {{/with}}
+            {{> FS.DeleteButton class="btn btn-danger"}}
+          {{else}}
+              <p>{{> FS.UploadProgressBar bootstrap=true class='progress-bar-success progress-bar-striped active' showPercent=true}} Uploading...</p>
+          {{/if}}
+        </div>
+    </div>
+</template>

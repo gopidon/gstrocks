@@ -195,3 +195,8 @@ Meteor.publish('notifications', function() {
     return Notifications.find({userId: this.userId, read: false});
 });
 
+
+// File Upload related
+Meteor.publish("filescfs", function() {
+    return FilesCFS.find();
+});
