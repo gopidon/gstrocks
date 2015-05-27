@@ -14,7 +14,6 @@ Template.postsList.events({
             $('#delPostModal').modal("hide");
             // display the error to the user and abort
             if (error) {
-                logger.error(error);
                 throwError(error.reason);
             }
         });
