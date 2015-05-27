@@ -18,7 +18,8 @@ Template.uploadFiles.events({
     'change input.any': FS.EventHandlers.insertFiles(FilesCFS, {
         metadata: function (fileObj) {
             return {
-                uploadedBy: Meteor.userId()
+                uploadedBy: Meteor.userId(),
+                index_status: "Not Indexed"
             };
         },
         after: function (error, fileObj) {
