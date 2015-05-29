@@ -2,11 +2,11 @@
  * Created by gopi on 5/28/15.
  */
 Template.search.onCreated(function () {
-    console.log("Created!");
+    //console.log("Created!");
 });
 
 Template.search.onCreated(function () {
-    console.log("Rendered!");
+    //console.log("Rendered!");
 });
 
 Template.search.helpers(

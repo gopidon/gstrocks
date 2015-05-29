@@ -25,7 +25,22 @@ Template.uploadFiles.events({
         after: function (error, fileObj) {
 
         }
-    })
+    }),
+    'click #delFile': function(e) {
+
+        e.preventDefault();
+        var currentFileId = $("#delFileModalId").val();
+        Meteor.call('deleteFile', currentFileId, function(error, result) {
+            $('#delFileModal').modal("hide");
+            if (error) {
+                //printObjectProperties(error);
+                throwError(error);
+            }
+            else{
+
+            }
+        });
+    }
 });
 
 Template.uploadFiles.helpers({

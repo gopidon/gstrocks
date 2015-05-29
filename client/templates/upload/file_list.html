@@ -6,6 +6,25 @@
         <input type="file" multiple class="any">
     </div>
     <div class="fileArea">
+        <!-- Modal -->
+        <div class="modal fade" id="delFileModal" tabindex="-1" role="dialog" aria-labelledby="delFileModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="delFileModalLabel">Confirm</h4>
+                    </div>
+                    <div id="delFileModalBody" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <input id="delFileModalId" type="hidden">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button type="button" id="delFile" class="btn btn-primary">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{#each uploadedFiles}}
             {{> fileItem}}
         {{/each}}
