@@ -1,0 +1,14 @@
+<template name="searchItem">
+    <div class="post">
+        <div class="post-content">
+            <h3><a href="{{pathFor 'postPage'}}">{{fields.title}}</a></h3>
+            {{#each highlight.content}}
+                <p>{{{this}}}</p>
+            {{/each}}
+            <h3><a href="{{fields.url}}">{{fields.name}}</a></h3>
+            {{#each highlight.file}}
+                <p>{{{this}}}</p>
+            {{/each}}
+        </div>
+    </div>
+</template>

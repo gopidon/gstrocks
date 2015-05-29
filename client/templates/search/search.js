@@ -1,10 +1,21 @@
 /**
- * Created by gopi on 2/7/15.
+ * Created by gopi on 5/28/15.
  */
-var options = {
-    keepHistory: 1000 * 60 * 5,
-    localSearch: true
-};
-var fields = ['title', 'content'];
+Template.search.onCreated(function () {
+    console.log("Created!");
+});
 
-PackageSearch = new SearchSource('NewsPosts', fields, options);
+Template.search.onCreated(function () {
+    console.log("Rendered!");
+});
+
+Template.search.helpers(
+    {
+        data: function(){
+            return Session.get("data");
+        },
+        showSpinner: function(){
+            return Session.get("showSpinner");
+        }
+    }
+);

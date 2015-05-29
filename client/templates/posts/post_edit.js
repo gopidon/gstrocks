@@ -41,7 +41,7 @@ Template.postEdit.events({
             return Session.set('postEditErrors', errors);
         }
 
-        Posts.update(currentPostId, {$set: postProperties}, function(error)
+        Meteor.call("postUpdate",currentPostId, postProperties, function(error)
         {
             if (error) {
                 // display the error to the user
@@ -55,7 +55,15 @@ Template.postEdit.events({
         e.preventDefault();
         if (confirm("Delete this post?")) {
             var currentPostId = this._id;
-            Posts.remove(currentPostId);
+            //Posts.remove(currentPostId);
+
+            Meteor.call('postDelete', currentPostId, function(error) {
+                if (error) {
+                    throwError(error.reason);
+                }
+            });
+
+
             Router.go('newPosts');
         } }
 });

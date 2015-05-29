@@ -27,3 +27,4 @@ twbs:bootstrap@=3.3.1
 cfs:standard-packages
 cfs:gridfs
 cfs:ui
+reactive-var

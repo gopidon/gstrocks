@@ -200,3 +200,10 @@ Meteor.publish('notifications', function() {
 Meteor.publish("filescfs", function() {
     return FilesCFS.find();
 });
+
+Meteor.publish("filescfs2", function() {
+    Meteor._sleepForMs(2000);
+    return FilesCFS.find();
+});
+
+

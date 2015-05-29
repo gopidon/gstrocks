@@ -478,6 +478,10 @@ body{
 .post .post-content h3 span {
     font-weight: normal; font-size: 14px; display: inline-block; color: #aaaaaa; }
 .post .post-content p { margin: 0; }
+.post-content em{
+    color:blue;
+    font-weight: bold;
+}
 .post .discuss { display: block; float: right; margin-top: 7px; }
 .comments { list-style-type: none; margin: 0; }
 .comments li h4 {

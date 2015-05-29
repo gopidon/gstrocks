@@ -1,0 +1,11 @@
+<template name="search">
+    {{#if showSpinner}}
+        {{> spinner}}
+    {{else}}
+            {{#each data}}
+                {{> searchItem}}
+            {{/each}}
+    {{/if}}
+
+
+</template>

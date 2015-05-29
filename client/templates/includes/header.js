@@ -79,7 +79,13 @@ Template.header.events({
     'click #loginLink': function(e) {
         e.preventDefault();
         $('#loginModal').modal("show");
-     }
+     },
+
+    'submit form': function(e) {
+        e.preventDefault();
+        var search =  $(e.currentTarget).find('#search').val();
+        Router.go('search',{'searchLimit':5,'searchText':search});
+    }
 });
 
 

@@ -29,5 +29,18 @@ Template.fileItem.events({
             }
         });
 
+    },
+    'click #deleteFile': function(e, t) {
+        e.preventDefault();
+        Meteor.call('deleteFile', this._id, function(error, result) {
+            if (error) {
+                //printObjectProperties(error);
+                throwError(error);
+            }
+            else{
+                console.log("Deleted successfully!");
+            }
+        });
+
     }
 });
