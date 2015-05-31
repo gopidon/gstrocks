@@ -35,22 +35,22 @@
                 <div class="col-md-11">
                     <div class="collapse navbar-collapse" id="navigation">
                         <div class="row">
-                            <ul class="nav navbar-nav navbar-right">
-                                <form class="navbar-form" role="search">
-                                    <div id="custom-search-input">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search" id="search" name="search">
+                            {{#if currentUser}}
+                                <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                                    <li>
+                                        <form class="navbar-form" role="search">
+                                            <div id="custom-search-input">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Search" id="search" name="search">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-danger" type="button">
                                                     <span class="glyphicon glyphicon-search"></span>
                                                 </button>
                                             </span>
-                                        </div>
-                                    </div>
-                                </form>
-                            </ul>
-                            {{#if currentUser}}
-                                <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </li>
                                     <li class="dropdown">
                                         {{> notifications}}
                                     </li>
@@ -64,6 +64,20 @@
                                 </ul>
                             {{else}}
                                 <ul id="social-logins" class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                                    <li>
+                                        <form class="navbar-form" role="search">
+                                            <div id="custom-search-input">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Search" id="search" name="search">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-danger" type="button">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </li>
                                     <li><a id="loginLink" href="#"><i class="fa fa-sign-in"></i> Log In</a></li>
                                 </ul>
                             {{/if}}
