@@ -1,129 +1,37 @@
 <template name="resources">
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <nav id="spy">
-                 <!-- <ul class="sidebar-nav nav">
-                    <li class="sidebar-brand">
-                        <a href="#home">Top</a>
-                    </li>
-                    <li>
-                        <a href="#anch1" data-scroll>
-                            <i class="fa fa-book"></i> Audit
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#anch2" data-scroll>
-                            <i class="fa fa-book"></i> Central Excise
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#anch3" data-scroll>
-                            <i class="fa fa-book"></i> Service Tax
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#anch4" data-scroll>
-                            <i class="fa fa-book"></i> Customs
-                        </a>
-                    </li>
-                </ul>-->
-                 <div class="nav-side-menu">
-                    <div class="brand">
-
-                            <a href="#home">Menu</a>
-
-                    </div>
-                    <i class="fa fa-bars toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
-                    <div class="menu-list">
-
-                        <ul id="menu-content" class="menu-content collapse in">
-                            <li>
-                                <a href="#anch0" data-scroll>
-                                    <i class="fa fa-book"></i> What is GST?
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#anch1" data-scroll>
-                                    <i class="fa fa-book"></i> Constitutional Amendment Bill
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#anch2" data-scroll>
-                                    <i class="fa fa-book"></i> IT Strategy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#anch3" data-scroll>
-                                    <i class="fa fa-book"></i> Discussion papers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#anch4" data-scroll>
-                                    <i class="fa fa-book"></i> Standing Committee Report
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Page content -->
-        <div id="page-content-wrapper">
-            <div class="content-header">
-                <h1 id="home">
-                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
-
-                    </a>
-                    Resources
-                </h1>
+       <div class="">
+            <h3 class="main">Resources</h3>
+            <div class="col-md-12 whity">
+                <legend id="anch0">What is GST?</legend>
+                <p>
+                    {{#each GSTPost}}
+                        {{{content}}}
+                    {{/each}}
+                </p>
             </div>
-
-            <div class="page-content inset" data-spy="scroll" data-target="#spy">
-
-                <div class="row resources">
-                    <div class="col-md-12 whity">
-                        <legend id="anch0">What is GST?</legend>
-                        <p>
-                            {{#each GSTPost}}
-                                {{{content}}}
-                            {{/each}}
-                        </p>
-                    </div>
-                    <div class="col-md-12 whity">
-                        <legend id="anch1">Constitutional Amendment Bill</legend>
-                        <ul>
-                            <li><a target="_blank" href="/feed.xml/res/CABill.pdf">The Constitution (122nd Amendment) (GST) Bill, 2014</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 whity">
-                        <legend id="anch2">IT Strategy</legend>
-                        <ul>
-                            <li><a target="_blank" href="/feed.xml/res/ITStrategy.pdf">IT Strategy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 whity">
-                        <legend id="anch3">Discussion Papers</legend>
-                        <ul>
-                            <li><a target="_blank" href="/feed.xml/res/FirstDPSFM.pdf">First Discussion Paper issued by Empowered Committee of SFM</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 whity">
-                        <legend id="anch4">Standing Commitee Report</legend>
-                        <ul>
-                            <li><a target="_blank" href="/feed.xml/res/SCReport.pdf">Parliamentary Standing Committee Report on GST</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
+            <div class="col-md-12 whity">
+                <legend id="anch1">Constitutional Amendment Bill</legend>
+                <ul>
+                    <li><a target="_blank" href="/feed.xml/res/CABill.pdf">The Constitution (122nd Amendment) (GST) Bill, 2014</a></li>
+                </ul>
             </div>
-
+            <div class="col-md-12 whity">
+                <legend id="anch2">IT Strategy</legend>
+                <ul>
+                    <li><a target="_blank" href="/feed.xml/res/ITStrategy.pdf">IT Strategy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-12 whity">
+                <legend id="anch3">Discussion Papers</legend>
+                <ul>
+                    <li><a target="_blank" href="/feed.xml/res/FirstDPSFM.pdf">First Discussion Paper issued by Empowered Committee of SFM</a></li>
+                </ul>
+            </div>
+            <div class="col-md-12 whity">
+                <legend id="anch4">Standing Commitee Report</legend>
+                <ul>
+                    <li><a target="_blank" href="/feed.xml/res/SCReport.pdf">Parliamentary Standing Committee Report on GST</a></li>
+                </ul>
+            </div>
         </div>
-
-    </div>
 </template>
