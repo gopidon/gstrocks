@@ -1,6 +1,22 @@
 <template name="contentpageheader">
     <nav class="navbar navbar-default">
+        <!-- Modal -->
+        <div class="modal fade in" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                    </div>
+                    <div id="loginModalBody" class="modal-body">
 
+                        <a  id="facebook-login" href="#" class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Log in with Facebook</a>
+                        <a id="google-login" href="#" class="btn btn-block btn-social btn-google-plus"><i class="fa fa-google"></i> Log in with Google</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
                     <!-- <ul class="nav navbar-nav pull-left">
                         <a class="navbar-brand" href="http://www.gstindiaguru.com" target="ext"><b>GSTIndiaGuru!</b></a>
