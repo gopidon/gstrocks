@@ -73,7 +73,7 @@ body.nav-expanded {
     background-color: #2e353d;
     top: 0px;
     margin: 0px;
-    width: 320px;
+    width: 240px;
     height: 100%;
     color: #FFFFFF;
 }
@@ -206,6 +206,8 @@ body.nav-expanded {
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
+
+
 @media (max-width: 767px) {
     .nav-side-menu {
         position: relative;
