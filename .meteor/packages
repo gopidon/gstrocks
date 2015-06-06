@@ -28,3 +28,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:ui
 reactive-var
+gig:external
