@@ -30,8 +30,8 @@ Template.layout.events({
         e.preventDefault();
         $("#wrapper").toggleClass("active");
     },
-    'click #menu-content .clickable a': function(e, t){
-       // $("#wrapper").toggleClass("active");
+    'click #menu-content li.clickable a': function(e, t){
+        $('body').toggleClass('nav-expanded');
     },
     'submit form#search': function(e) {
         e.preventDefault();
