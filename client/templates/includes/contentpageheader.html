@@ -1,0 +1,38 @@
+<template name="contentpageheader">
+    <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+                    <!-- <ul class="nav navbar-nav pull-left">
+                        <a class="navbar-brand" href="http://www.gstindiaguru.com" target="ext"><b>GSTIndiaGuru!</b></a>
+                    </ul>-->
+                    {{#if currentUser}}
+
+                            <ul class="nav navbar-nav pull-right">
+                                <li>
+                                    <button id="nav-expander" type="button" class="navbar-toggle nav-expander" style="display:block;">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                    {{else}}
+
+                            <ul id="social-logins" class="nav navbar-nav pull-right">
+                                <li>
+                                    <button id="nav-expander" type="button" class="navbar-toggle nav-expander" style="display: block;">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                    {{/if}}
+
+        </div>
+    </nav>
+</template>

@@ -1,5 +1,5 @@
 body{
-    font-family: Helvetica;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
     /*background-color: #F3F3F3;*/
 }
 
@@ -107,11 +107,12 @@ body{
 .nav-side-menu {
     overflow: auto;
     font-family: Helvetica;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 200;
     background-color: #2e353d;
     top: 0px;
-    width: 250px;
+    margin: 0px;
+    width: 320px;
     height: 100%;
     color: #FFFFFF;
 }
