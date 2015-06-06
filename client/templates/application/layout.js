@@ -3,8 +3,7 @@
  */
 Template.layout.rendered = function() {
     // Initialize navgoco with default options
-    $('#navCloseMe').on('click',function(e){
-        alert("hello");
+    $('#nav-close').on('click',function(e){
         e.preventDefault();
         $('body').removeClass('nav-expanded');
     });
@@ -43,11 +42,6 @@ Template.layout.events({
     'click #nav-expander': function(e, t){
         e.preventDefault();
         $('body').toggleClass('nav-expanded');
-    },
-    'click #navCloseMe': function(e, t){
-        alert("Hello");
-        e.preventDefault();
-        $('body').removeClass('nav-expanded');
     }
 
 });

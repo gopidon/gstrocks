@@ -18,37 +18,47 @@
             </div>
         </div>
         <div class="container-fluid">
-                    <!-- <ul class="nav navbar-nav pull-left">
-                        <a class="navbar-brand" href="http://www.gstindiaguru.com" target="ext"><b>GSTIndiaGuru!</b></a>
-                    </ul> -->
-                    {{#if currentUser}}
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <!-- <form id="search" style="width: 100%; margin: 5px" class="navbar-form" role="search">
+                                <div id="custom-search-input" style="width: 100%">
+                                    <div class="input-group" style="width: 100%">
+                                        <input type="text" style="width: 100%" class="form-control" placeholder="Search" id="search" name="search">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-danger" type="button">
+                                                                <span class="glyphicon glyphicon-search"></span>
+                                                            </button>
+                                                        </span>
+                                    </div>
+                                </div>
+                            </form> -->
+                            <form id="search" style="margin-top: 5px" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search anything ..." name="search" id="search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
 
-                            <ul class="nav navbar-nav pull-right">
-                                <li>
-                                    <button id="nav-expander" type="button" class="navbar-toggle nav-expander" style="display:block;">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </li>
-                            </ul>
-
-                    {{else}}
-
-                            <ul id="social-logins" class="nav navbar-nav pull-right">
-                                <li>
-                                    <button id="nav-expander" type="button" class="navbar-toggle nav-expander" style="display: block;">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </li>
-                            </ul>
-
-                    {{/if}}
-
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button id="nav-expander" type="button" class="navbar-toggle nav-expander" style="display:block;">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
 </template>

@@ -253,6 +253,10 @@ body{
     .inset {
         padding: 15px;
     }
+
+    #presentation {
+        display: none;
+    }
 }
 
 
