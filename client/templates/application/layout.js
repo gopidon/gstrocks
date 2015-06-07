@@ -8,6 +8,14 @@ Template.layout.rendered = function() {
         $('body').removeClass('nav-expanded');
     });
 
+    //Attach fast click
+
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
+
+
     $(".main-menu").navgoco({
         caret: '<span class="caret"></span>',
         accordion: false,
