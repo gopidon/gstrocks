@@ -40,7 +40,7 @@ Template.dpostEdit.events({ 'submit form': function(e) {
         return Session.set('dpostEditErrors', errors);
     }
 
-    DPosts.update(currentDPostId, {$set: dpostProperties}, function(error)
+    Meteor.call("dpostUpdate",currentDPostId, dpostProperties, function(error)
     {
         if (error) {
             // display the error to the user
