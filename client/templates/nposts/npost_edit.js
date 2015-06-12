@@ -36,7 +36,7 @@ Template.npostEdit.events({ 'submit form': function(e) {
         return Session.set('npostEditErrors', errors);
     }
 
-    NPosts.update(currentNPostId, {$set: npostProperties}, function(error)
+    Meteor.call("npostUpdate",currentNPostId, npostProperties, function(error)
     {
         if (error) {
             // display the error to the user
