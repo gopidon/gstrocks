@@ -1,14 +1,31 @@
 <template name="searchItem">
     <div class="post">
         <div class="post-content">
-            <h3><a href="{{pathFor 'postPage'}}">{{fields.title}}</a></h3>
-            {{#each highlight.content}}
-                <p>{{{this}}}</p>
-            {{/each}}
-            <h3><a target="_blank" href="{{fields.url}}">{{fields.name}}</a></h3>
-            {{#each highlight.file}}
-                <p>{{{this}}}</p>
-            {{/each}}
+            {{#if isResource}}
+                <h3><a target="_blank" href="{{fields.url}}">{{fields.name}}</a></h3>
+                {{#each highlight.file}}
+                    <p>{{{this}}}</p>
+                {{/each}}
+            {{else}}
+                {{#if isPost}}
+                    <h3><a href="{{pathFor 'postPage'}}">{{fields.title}}</a></h3>
+                    {{#each highlight.content}}
+                        <p>{{{this}}}</p>
+                    {{/each}}
+                {{/if}}
+                {{#if isDPost}}
+                    <h3><a href="{{pathFor 'dpostPage'}}">{{fields.title}}</a></h3>
+                    {{#each highlight.content}}
+                        <p>{{{this}}}</p>
+                    {{/each}}
+                {{/if}}
+                {{#if isNPost}}
+                    <h3><a href="{{pathFor 'npostPage'}}">{{fields.title}}</a></h3>
+                    {{#each highlight.content}}
+                        <p>{{{this}}}</p>
+                    {{/each}}
+                {{/if}}
+            {{/if}}
         </div>
     </div>
 </template>
